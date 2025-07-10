@@ -28,6 +28,7 @@ models:
               values: ["new", "returning"]
 
   - name: fct_orders
+    latest_version: 1
     config:
       contract:
         enforced: true
@@ -69,3 +70,14 @@ models:
       - name: order_cost
         data_type: float
         description: The sum of supply expenses to fulfill the order.
+    versions:
+      - v: 1
+        config:
+          alias: fct_orders
+      - v: 2
+        columns:
+          - name: order_cost_final
+            data_type: float
+          - include: all
+            exclude: [order_cost]
+            
