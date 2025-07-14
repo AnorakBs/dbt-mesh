@@ -1,0 +1,9 @@
+groups:
+  - name: finance
+    owner: 
+      name: aaaa
+  - name: product
+    owner:
+      name: bbbb
+
+      
